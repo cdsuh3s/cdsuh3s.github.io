@@ -46,7 +46,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -57,8 +57,9 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
+    theme                : "gruvbox-dark" # "github-light" (default), "github-dark", "github-dark-orange", "icy-dark", "dark-blue", "photon-dark", "boxy-light", "gruvbox-dark"
+    issue_term           : "pathname" # "pathname" (default)
+    label                : "comment"
   giscus:
     repo_id              : # Shown during giscus setup at https://giscus.app
     category_name        : # Full text name of the category
@@ -313,28 +314,13 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-        #      read_time: true
-        #      comments: # true
-        #      share: true
-        #      related: true
-
-
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single
       author_profile: true
 #     read_time: true
-#     comments: # true
+      comments: true
 #     share: true
 #     related: true
   # _pages
